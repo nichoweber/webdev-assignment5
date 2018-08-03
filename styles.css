@@ -1,0 +1,173 @@
+/*On the body tag, I am removing default margins and setting up flexbox, so I can
+push the footer to the bottom of the page.*/
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .85em;
+}
+
+
+/*Styles for the nav and the footer*/
+nav, footer {
+    background: hsl(180, 24%, 67%);
+    padding: 15px;
+}
+
+/*Making the links on the nav white and adding space between the links*/
+nav a {
+    color: white;
+    margin-right: 15px;
+}
+
+nav a:first-of-type {
+    font-size: 2em;
+}
+
+/*Styles the main section of the document, while pushing the footer to the bottom*/
+main {
+    flex: 1;
+    padding: 0 7.5vw;
+    background: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Gives the page content a black margin*/
+main > div {
+    background: white;
+    padding: 25px;
+    flex: 1;
+}
+
+/*Styles the logo and adds a border to the bottom*/
+header img {
+    width: 250px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+/*Each article will be a self-contained box of the theme color, #96bebe, with
+white text*/
+article {
+    background: #96bebe;
+    color: white;
+    padding: 15px;
+    margin: 25px 0;
+    width: 50%;
+    border-radius: 25px;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12)
+}
+
+/*Centers the footer text and makes it white*/
+footer {
+    text-align: center;
+    color: white;
+}
+
+/*Creating styles for the about us table*/
+table tr th, table tr td {
+    border: 2px solid #96bebe;
+    padding: 1vw;
+    font-weight: normal;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+}
+
+table tr th {
+    font-weight: bold;
+}
+
+table tr td:first-of-type {
+    font-weight: bold;
+}
+
+/*Setting up the two column system on the services page*/
+
+#service-flex {
+    display: flex;
+}
+
+#service-flex span {
+    width: 50vw;
+}
+
+/*Setting up multiple rows and columns on the index page*/
+#index {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+}
+
+#index div {
+    background: #96bebe;
+    color: white;
+    margin: 15px;
+    padding: 3.75vw;
+}
+
+/*A media query tells the browser to change styles under different conditions, in this case,
+screen width. I am telling the site to change aspects of itself on a smaller screen*/
+
+ @media only screen and (max-width: 600px) {
+    main {
+        background: white;
+    }
+    
+    article {
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a{
+        margin-bottom: 10px;
+    }
+
+    #service-flex span:first-of-type {
+        margin-right: 25px;
+    }
+}
+
+/*Styles for the gallery go here*/
+
+#gallery img, #gallery iframe, #gallery audio {
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+#gallery img {
+    width: 300px;
+    height: auto;
+}
+
+#gallery h2 {
+    margin-top: 50px;
+}
+
+/*Styles for forms*/
+
+fieldset {
+    margin: 20px 0;
+    border: 2px solid #96bebe;
+}
+
+#button {
+    border: none;
+    background: #96bebe;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    transition: all .3s;
+}
+
+#button:hover {
+    background: white;
+    color: #96bebe;
+}

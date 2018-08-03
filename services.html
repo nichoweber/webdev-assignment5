@@ -1,0 +1,78 @@
+<!--
+    Name: Nicholas Weber
+    Date: 7/21/2018
+    Filname: index.htm
+
+    This basic HTML document will contain the basic elements of an HTML page.
+    It will also double as a professional website for my future business.
+-->
+
+<!--The DOCTYPE declaration tells the browser what type of markup it is to read,
+in this case, HTML.-->
+<!DOCTYPE html>
+
+<!--The HTML tag indicates to the browser that this is an HTML document.-->
+<html>
+
+<!--The head of the document contains important information about the site.
+    Content in the head is not viewed by the user, it is just interpreted by the browser.-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>nichoweber.com - Professional Web Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<!--The body of the document contains the content that is rendered by the browser and seen
+    by the user.-->
+
+<body>
+
+    <!--The nav tag usually hosts navigation links to other parts of the site-->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!--The main tag is usually used to store the page content between the nav
+    and footer-->
+    <main>
+        <div>
+            <!--The header tag contains titles, logos, and other introductory content on a 
+                            webpage-->
+            <header>
+                <img src="logo.png" alt="logo">
+                <h1>Services</h1>
+            </header>
+            <div id="service-flex">
+                <span>
+                    <h2>Web Design</h2>
+                    <section>
+                        <article>
+                            I design websites.
+                        </article>
+                    </section>
+                </span>
+                <span>
+                    <h2>Web Application Development</h2>
+                    <section>
+                        <article>
+                            I also develop web applications.
+                        </article>
+                    </section>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <!--The footer tag contains content meant to be at the bottom of a webpage, usually
+        copyright information and secondary navigation.-->
+    <footer>
+        <span>&#169; 2018 nichoweber.com</span>
+    </footer>
+</body>
+
+</html>
